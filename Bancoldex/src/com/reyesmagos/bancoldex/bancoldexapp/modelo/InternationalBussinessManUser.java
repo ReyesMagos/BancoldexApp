@@ -24,7 +24,10 @@ public class InternationalBussinessManUser extends BusinessManUser {
 		this.operatingCountries = operatingCountries;
 	}
 
+	
+
 	public static InternationalBussinessManUser getInstance() {
+		// TODO Auto-generated method stub
 		if (instance == null)
 			instance = new InternationalBussinessManUser();
 		return instance;
