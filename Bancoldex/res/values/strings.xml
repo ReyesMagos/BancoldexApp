@@ -8,4 +8,24 @@
     <!-- Controladores -->
     <string name="ok_label">Ok</string>
 
+    <!-- controller -->
+    <string name="ok_label">Ok</string>
+
+    <!-- login -->
+    <string name="username_label">username</string>
+    <string name="password_label">password</string>
+    
+    <!-- Register activity -->
+    <string name="rol_textview_name">Rol: </string>
+    <string name="company_name_text">Nombre: </string>
+    <string name="nit_number_text">NIT</string>
+    <string name="sector_name_text">Sector</string>
+    <string name="sector_selector_text">Sector</string>
+    <string name="subsector_text">Subsector</string>
+    <string name="location_text">Ubicación</string>
+    <string name="department_activity">Departamento</string>
+    <string name="municipality_text">Municipio</string>
+    <string name="password_text">Contraseña</string>
+    <string name="composition_name_text">Socios</string>
+
 </resources>
