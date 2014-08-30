@@ -24,11 +24,11 @@ public class FactoryUsers {
 		if (type == 1) {
 			createNationalBussinessManUser(parseUser);
 		} else if (type == 2) {
-
+			createInternationalBusinessManUser(parseUser);
 		}
 	}
 
-	public void createInternationañBusinessManUser(ParseUser parseUser) {
+	public void createInternationalBusinessManUser(ParseUser parseUser) {
 		InternationalBussinessManUser internationalBussinessManUser = InternationalBussinessManUser
 				.getInstance();
 		internationalBussinessManUser.setUsername(parseUser.getUsername());
@@ -46,7 +46,7 @@ public class FactoryUsers {
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
 		internationalBussinessManUser.setLocation(location);
-		
+		internationalBussinessManUser.setOperatingCountries(getListFromToken(parseUser.getString("operatingCountries"), ","));
 	}
 
 	public void createNationalBussinessManUser(ParseUser parseUser) {
@@ -67,6 +67,7 @@ public class FactoryUsers {
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
 		nationalBusinessManUser.setLocation(location);
+		nationalBusinessManUser.setKeyActivities(parseUser.getString("keyActivities"));
 	}
 
 	public List<String> getListFromToken(String s, String token) {
