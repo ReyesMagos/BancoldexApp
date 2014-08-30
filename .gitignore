@@ -34,3 +34,20 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+*.class
+*.apk
+*.dex
+*.cache
+
+
+
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class

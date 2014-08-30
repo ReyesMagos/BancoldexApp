@@ -42,11 +42,24 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
+        public static final int company_name_text=0x7f050007;
+        public static final int composition_name_text=0x7f050010;
+        public static final int department_activity=0x7f05000d;
         public static final int hello_world=0x7f050001;
+        public static final int location_text=0x7f05000c;
+        public static final int municipality_text=0x7f05000e;
+        public static final int nit_number_text=0x7f050008;
         /**  controller 
          */
         public static final int ok_label=0x7f050003;
         public static final int password_label=0x7f050005;
+        public static final int password_text=0x7f05000f;
+        /**  Register activity 
+         */
+        public static final int rol_textview_name=0x7f050006;
+        public static final int sector_name_text=0x7f050009;
+        public static final int sector_selector_text=0x7f05000a;
+        public static final int subsector_text=0x7f05000b;
         /**  login 
          */
         public static final int username_label=0x7f050004;
