@@ -8,10 +8,17 @@ abstract class BusinessManUser {
 	private String password;
 	private String nit;
 	private String sector;
-	private String subSectro;
+	private String subSector;
 	private List<String> partners;
+	private Location location;
+	private String enterpriseType;
 	
-	
+	public String getEnterpriseType() {
+		return enterpriseType;
+	}
+	public void setEnterpriseType(String enterpriseType) {
+		this.enterpriseType = enterpriseType;
+	}
 	public String getUsername() {
 		return username;
 	}
@@ -37,16 +44,22 @@ abstract class BusinessManUser {
 		this.sector = sector;
 	}
 	public String getSubSectro() {
-		return subSectro;
+		return subSector;
 	}
 	public void setSubSectro(String subSectro) {
-		this.subSectro = subSectro;
+		this.subSector = subSectro;
 	}
 	public List<String> getPartners() {
 		return partners;
 	}
 	public void setPartners(List<String> partners) {
 		this.partners = partners;
+	}
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
 	}
 	
 	

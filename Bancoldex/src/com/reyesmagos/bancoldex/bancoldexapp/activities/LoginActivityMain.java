@@ -1,5 +1,6 @@
 package com.reyesmagos.bancoldex.bancoldexapp.activities;
 
+import com.parse.Parse;
 import com.reyesmagos.bancoldex.bancoldexapp.R;
 
 import android.app.Activity;
@@ -14,38 +15,34 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 public class LoginActivityMain extends Activity {
-	
-	
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_activity_main);
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login_activity_main);
+		Parse.initialize(this, "CSOvHOL2LAGOOeE8qYerrNjH3NI2cVZ5UBOcHlKe",
+				"r4XmfDGswmwsZcSjen84pVrwtNgI7nLjxeqjweZH");
 
-      
-    }
+	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login_activity_main, menu);
-        return true;
-    }
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.login_activity_main, menu);
+		return true;
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
 }
