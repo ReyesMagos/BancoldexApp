@@ -38,7 +38,8 @@ public class FactoryUsers {
 				parseUser.getString("partners"), ","));
 		internationalBussinessManUser.setNit(parseUser.getString("nit"));
 		internationalBussinessManUser.setSector(parseUser.getString("sector"));
-		internationalBussinessManUser.setSubSectro(parseUser.getString("subSector"));
+		internationalBussinessManUser.setSubSectro(parseUser
+				.getString("subSector"));
 		Location location = new Location();
 		location.setAdress(parseUser.getString("adress"));
 		location.setDepartament(parseUser.getString("departament"));
@@ -46,7 +47,8 @@ public class FactoryUsers {
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
 		internationalBussinessManUser.setLocation(location);
-		internationalBussinessManUser.setOperatingCountries(getListFromToken(parseUser.getString("operatingCountries"), ","));
+		internationalBussinessManUser.setOperatingCountries(getListFromToken(
+				parseUser.getString("operatingCountries"), ","));
 	}
 
 	public void createNationalBussinessManUser(ParseUser parseUser) {
@@ -67,7 +69,16 @@ public class FactoryUsers {
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
 		nationalBusinessManUser.setLocation(location);
-		nationalBusinessManUser.setKeyActivities(parseUser.getString("keyActivities"));
+		nationalBusinessManUser.setKeyActivities(parseUser
+				.getString("keyActivities"));
+	}
+
+	public void createIntermediaryAgent(ParseUser parseUser) {
+		IntermediaryAgent intermediaryAgent = IntermediaryAgent.getInstance();
+		intermediaryAgent.setUsername(parseUser.getUsername());
+		intermediaryAgent.setEntity(parseUser.getString("entity"));
+		intermediaryAgent.setNit(parseUser.getString("nit"));
+		intermediaryAgent.setAgentName(parseUser.getString("agentName"));
 	}
 
 	public List<String> getListFromToken(String s, String token) {

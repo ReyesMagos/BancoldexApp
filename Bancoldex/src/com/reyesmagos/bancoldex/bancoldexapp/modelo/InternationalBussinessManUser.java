@@ -12,7 +12,6 @@ public class InternationalBussinessManUser extends BusinessManUser {
 		// TODO Auto-generated constructor stub
 	}
 
-
 	public static void setInstance(InternationalBussinessManUser instance) {
 		InternationalBussinessManUser.instance = instance;
 	}
