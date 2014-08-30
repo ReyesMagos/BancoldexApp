@@ -20,14 +20,16 @@ public class NationalBusinessManUser extends BusinessManUser {
 		this.keyActivities = keyActivities;
 	}
 
+
+
+	public static void setInstance(NationalBusinessManUser instance) {
+		NationalBusinessManUser.instance = instance;
+	}
+
 	public static NationalBusinessManUser getInstance() {
 		if (instance == null)
 			instance = new NationalBusinessManUser();
 		return instance;
-	}
-
-	public static void setInstance(NationalBusinessManUser instance) {
-		NationalBusinessManUser.instance = instance;
 	}
 
 }

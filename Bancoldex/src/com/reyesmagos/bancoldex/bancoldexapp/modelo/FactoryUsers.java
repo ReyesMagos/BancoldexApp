@@ -23,13 +23,35 @@ public class FactoryUsers {
 		int type = parseUser.getInt("type");
 		if (type == 1) {
 			createNationalBussinessManUser(parseUser);
-		}else if(type==2){
-			
+		} else if (type == 2) {
+
 		}
 	}
 
+	public void createInternationañBusinessManUser(ParseUser parseUser) {
+		InternationalBussinessManUser internationalBussinessManUser = InternationalBussinessManUser
+				.getInstance();
+		internationalBussinessManUser.setUsername(parseUser.getUsername());
+		internationalBussinessManUser.setEnterpriseType(parseUser
+				.getString("enterpriseType"));
+		internationalBussinessManUser.setPartners(getListFromToken(
+				parseUser.getString("partners"), ","));
+		internationalBussinessManUser.setNit(parseUser.getString("nit"));
+		internationalBussinessManUser.setSector(parseUser.getString("sector"));
+		internationalBussinessManUser.setSubSectro(parseUser.getString("subSector"));
+		Location location = new Location();
+		location.setAdress(parseUser.getString("adress"));
+		location.setDepartament(parseUser.getString("departament"));
+		location.setMunicipio(parseUser.getString("municipio"));
+		location.setLat(Double.parseDouble(parseUser.getString("lat")));
+		location.setLng(Double.parseDouble(parseUser.getString("lng")));
+		internationalBussinessManUser.setLocation(location);
+		
+	}
+
 	public void createNationalBussinessManUser(ParseUser parseUser) {
-		NationalBusinessManUser nationalBusinessManUser = NationalBusinessManUser.getInstance();
+		NationalBusinessManUser nationalBusinessManUser = NationalBusinessManUser
+				.getInstance();
 		nationalBusinessManUser.setUsername(parseUser.getUsername());
 		nationalBusinessManUser.setEnterpriseType(parseUser
 				.getString("enterpriseType"));
