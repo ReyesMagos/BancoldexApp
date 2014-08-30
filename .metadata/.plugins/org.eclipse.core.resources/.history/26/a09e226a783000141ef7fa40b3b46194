@@ -2,7 +2,6 @@ package com.reyesmagos.bancoldex.bancoldexapp.activities;
 
 import com.reyesmagos.bancoldex.bancoldexapp.R;
 
-
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -16,7 +15,7 @@ import android.os.Build;
 
 public class LoginActivityMain extends Activity {
 	
-	private ActionBar action;
+	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

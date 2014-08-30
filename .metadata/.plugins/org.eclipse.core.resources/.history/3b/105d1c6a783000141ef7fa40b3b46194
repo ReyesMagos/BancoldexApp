@@ -1,0 +1,5 @@
+package com.reyesmagos.bancoldex.bancoldexapp.controladores;
+
+public abstract class Controller {
+
+}
