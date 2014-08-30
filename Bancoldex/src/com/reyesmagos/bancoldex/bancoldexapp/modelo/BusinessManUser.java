@@ -12,6 +12,25 @@ abstract class BusinessManUser {
 	private List<String> partners;
 	private Location location;
 	private String enterpriseType;
+	private String gremio;
+	
+	
+
+	public String getSubSector() {
+		return subSector;
+	}
+
+	public void setSubSector(String subSector) {
+		this.subSector = subSector;
+	}
+
+	public String getGremio() {
+		return gremio;
+	}
+
+	public void setGremio(String gremio) {
+		this.gremio = gremio;
+	}
 
 	public String getEnterpriseType() {
 		return enterpriseType;
