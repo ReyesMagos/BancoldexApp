@@ -4,6 +4,9 @@ import java.util.List;
 
 public class NationalBusinessManUser extends BusinessManUser{
 	
+	private String keyActivities;
+	
+	
 	
 	
 	

@@ -1,6 +1,9 @@
 package com.reyesmagos.bancoldex.bancoldexapp.controlador;
 
+import com.parse.LogInCallback;
 import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 import android.app.Activity;
 
@@ -43,6 +46,20 @@ public class LoginController extends AbstractController {
 
 	public String getTagFielWrong() {
 		return tagFielWrong;
+	}
+	
+	public void login(String username, String password){
+		ParseUser user= new ParseUser();
+		ParseUser.logInInBackground(username, password, new LogInCallback() {
+			
+			@Override
+			public void done(ParseUser user, ParseException arg1) {
+				// TODO Auto-generated method stub
+				if(user!=null){
+					
+				}
+			}
+		});
 	}
 
 }
