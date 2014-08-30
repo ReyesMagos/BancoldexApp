@@ -25,6 +25,8 @@ public class FactoryUsers {
 			createNationalBussinessManUser(parseUser);
 		} else if (type == 2) {
 			createInternationalBusinessManUser(parseUser);
+		}else if(type==3){
+			createIntermediaryAgent(parseUser);
 		}
 	}
 
