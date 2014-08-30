@@ -22,23 +22,29 @@ public class FactoryUsers {
 	public void createUserFromParseUser(ParseUser parseUser) {
 		int type = parseUser.getInt("type");
 		if (type == 1) {
-			NationalBusinessManUser nationalBusinessManUser = new NationalBusinessManUser();
-			nationalBusinessManUser.setUsername(parseUser.getUsername());
-			nationalBusinessManUser.setEnterpriseType(parseUser
-					.getString("enterpriseType"));
-			nationalBusinessManUser.setPartners(getListFromToken(
-					parseUser.getString("partners"), ","));
-			nationalBusinessManUser.setNit(parseUser.getString("nit"));
-			nationalBusinessManUser.setSector(parseUser.getString("sector"));
-			nationalBusinessManUser.setSubSectro(parseUser.getString("subSector"));
-			Location location = new Location();
-			location.setAdress(parseUser.getString("adress"));
-			location.setDepartament(parseUser.getString("departament"));
-			location.setMunicipio(parseUser.getString("municipio"));
-			location.setLat(Double.parseDouble(parseUser.getString("lat")));
-			location.setLng(Double.parseDouble(parseUser.getString("lng")));	
+			createNationalBussinessManUser(parseUser);
+		}else if(type==2){
 			
 		}
+	}
+
+	public void createNationalBussinessManUser(ParseUser parseUser) {
+		NationalBusinessManUser nationalBusinessManUser = NationalBusinessManUser.getInstance();
+		nationalBusinessManUser.setUsername(parseUser.getUsername());
+		nationalBusinessManUser.setEnterpriseType(parseUser
+				.getString("enterpriseType"));
+		nationalBusinessManUser.setPartners(getListFromToken(
+				parseUser.getString("partners"), ","));
+		nationalBusinessManUser.setNit(parseUser.getString("nit"));
+		nationalBusinessManUser.setSector(parseUser.getString("sector"));
+		nationalBusinessManUser.setSubSectro(parseUser.getString("subSector"));
+		Location location = new Location();
+		location.setAdress(parseUser.getString("adress"));
+		location.setDepartament(parseUser.getString("departament"));
+		location.setMunicipio(parseUser.getString("municipio"));
+		location.setLat(Double.parseDouble(parseUser.getString("lat")));
+		location.setLng(Double.parseDouble(parseUser.getString("lng")));
+		nationalBusinessManUser.setLocation(location);
 	}
 
 	public List<String> getListFromToken(String s, String token) {
