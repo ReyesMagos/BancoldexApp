@@ -8,7 +8,7 @@ public interface INoticeDAO {
 
 	public void getNoticesFromDepartment(String department);
 
-	public void  getNoticesFromRegion(String region);
+	public void  getNoticesFromCountrie(List<String> countrie);
 
 	public void getNoticesFromGremio(String Gremio);
 

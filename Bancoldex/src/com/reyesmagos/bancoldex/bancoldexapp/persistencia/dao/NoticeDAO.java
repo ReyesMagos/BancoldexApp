@@ -3,7 +3,9 @@ package com.reyesmagos.bancoldex.bancoldexapp.persistencia.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.reyesmagos.bancoldex.bancoldexapp.controlador.FacadeController;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.Notice;
 import com.reyesmagos.bancoldex.bancoldexapp.services.asyntask.DAOAsynTask;
 
@@ -18,10 +20,12 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 	}
 
 	@Override
-	public void getNoticesFromRegion(String region) {
+	public void getNoticesFromCountrie(List<String> countrie) {
 		// TODO Auto-generated method stub
 		ParseQuery query = new ParseQuery("Notice");
-		query.whereEqualTo("region", region);
+		for (String s : countrie) {
+			query.whereEqualTo("countrie", s);
+		}
 		executeAsynTaskDAO(query);
 
 	}
@@ -43,6 +47,20 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 
 	public void createNotice(List lista) {
 		List<Notice> noticeList = new ArrayList<Notice>();
+		for (Object object : lista) {
+			ParseObject parseObject = (ParseObject) object;
+			Notice notice = new Notice();
+			notice.setContent(parseObject.getString("content"));
+			notice.setCountrie(parseObject.getString("countrie"));
+			notice.setDate(parseObject.getString("date"));
+			notice.setDepartment(parseObject.getString("departament"));
+			notice.setGremio(parseObject.getString("gremio"));
+			notice.setSector(parseObject.getString("sector"));
+			notice.setTitle(parseObject.getString("title"));
+			noticeList.add(notice);
+
+		}
+		FacadeController.getInstance().showNotices(noticeList);
 
 	}
 

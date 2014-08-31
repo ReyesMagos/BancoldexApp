@@ -1,9 +1,12 @@
 package com.reyesmagos.bancoldex.bancoldexapp.controlador;
 
+import java.util.List;
+
 import com.reyesmagos.bancoldex.bancoldexapp.activities.LoginActivityMain;
 import com.reyesmagos.bancoldex.bancoldexapp.activities.NoticesTimeLineActivity;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.BusinessManUser;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.IntermediaryAgent;
+import com.reyesmagos.bancoldex.bancoldexapp.modelo.Notice;
 
 import android.app.Activity;
 
@@ -45,10 +48,20 @@ public class FacadeController {
 
 	}
 
+	public void getNoticesFromBusinessMan(BusinessManUser businessManUser) {
+		this.noticeTimeLineController
+				.getNoticesFromBusinessMan(businessManUser);
+
+	}
+
 	public void login(String username, String password) {
 		this.loginController.showProgressDialog("alert", "Espere Por Favor");
 		this.loginController.login(username, password);
 
+	}
+
+	public void showNotices(List<Notice> listNotice) {
+		this.noticeTimeLineController.showNotices(listNotice);
 	}
 
 	public static FacadeController getInstance() {

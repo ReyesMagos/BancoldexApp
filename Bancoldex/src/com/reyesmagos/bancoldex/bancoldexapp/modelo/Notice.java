@@ -6,8 +6,26 @@ public class Notice {
 	public String sector;
 	public String date;
 	public String gremio;
+	public String countrie;
+	public String title;
+	public String content;
 	
 	
+	
+	
+	
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getDepartment() {
 		return department;
 	}
@@ -32,6 +50,14 @@ public class Notice {
 	public void setGremio(String gremio) {
 		this.gremio = gremio;
 	}
+	public String getCountrie() {
+		return countrie;
+	}
+	public void setCountrie(String countrie) {
+		this.countrie = countrie;
+	}
+	
+	
 	
 	
 	

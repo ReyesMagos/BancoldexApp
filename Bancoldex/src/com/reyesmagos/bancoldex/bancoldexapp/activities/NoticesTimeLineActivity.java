@@ -16,21 +16,39 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.os.Build;
 
 public class NoticesTimeLineActivity extends Activity {
 	private FacadeController facadeController;
+	private ListView listviewNotices;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_notices_time_line);
 		facadeController = FacadeController.getInstance();
-		BusinessManUser businessManUser= facadeController.getBusinessManUser();
-		if(businessManUser!=null){
-			
+		facadeController.registerActivityToController(this);
+		init();
+		BusinessManUser businessManUser = facadeController.getBusinessManUser();
+		if (businessManUser != null) {
+			facadeController.getNoticesFromBusinessMan(facadeController
+					.getBusinessManUser());
 		}
 
+	}
+
+	public void init() {
+		listviewNotices = (ListView) findViewById(R.id.listView_notices);
+
+	}
+
+	public ListView getListviewNotices() {
+		return listviewNotices;
+	}
+
+	public void setListviewNotices(ListView listviewNotices) {
+		this.listviewNotices = listviewNotices;
 	}
 
 	@Override
