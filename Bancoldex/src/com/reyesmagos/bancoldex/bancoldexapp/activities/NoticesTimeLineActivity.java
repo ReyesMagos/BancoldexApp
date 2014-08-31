@@ -6,6 +6,7 @@ import com.reyesmagos.bancoldex.bancoldexapp.R.layout;
 import com.reyesmagos.bancoldex.bancoldexapp.R.menu;
 import com.reyesmagos.bancoldex.bancoldexapp.controlador.FacadeController;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.BusinessManUser;
+import com.reyesmagos.bancoldex.bancoldexapp.modelo.IntermediaryAgent;
 
 import android.app.Activity;
 import android.app.ActionBar;
@@ -22,6 +23,7 @@ import android.os.Build;
 public class NoticesTimeLineActivity extends Activity {
 	private FacadeController facadeController;
 	private ListView listviewNotices;
+	private ActionBar actionBar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,16 @@ public class NoticesTimeLineActivity extends Activity {
 		setContentView(R.layout.activity_notices_time_line);
 		facadeController = FacadeController.getInstance();
 		facadeController.registerActivityToController(this);
+		actionBar = getActionBar();
 		init();
 		BusinessManUser businessManUser = facadeController.getBusinessManUser();
 		if (businessManUser != null) {
 			facadeController.getNoticesFromBusinessMan(facadeController
 					.getBusinessManUser());
+		} else {
+			IntermediaryAgent intermediaryAgent = facadeController
+					.getIntermediaryAgent();
+			facadeController.getNoticesFromEntity(intermediaryAgent);
 		}
 
 	}

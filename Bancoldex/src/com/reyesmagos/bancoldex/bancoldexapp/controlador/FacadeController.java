@@ -49,6 +49,7 @@ public class FacadeController {
 	}
 
 	public void getNoticesFromBusinessMan(BusinessManUser businessManUser) {
+		this.noticeTimeLineController.showProgressDialog("Alerta", "Buscando Noticias Por Favor Espere");
 		this.noticeTimeLineController
 				.getNoticesFromBusinessMan(businessManUser);
 
@@ -70,9 +71,24 @@ public class FacadeController {
 		return instance;
 	}
 
+	public void getNoticesFromSector(BusinessManUser businessManUser) {
+		this.noticeTimeLineController.showProgressDialog("Alerta", "Buscando Noticias Por Favor Espere");
+		this.noticeTimeLineController.getNoticesFromSector(businessManUser);
+	}
+
+	public void getNoticesFromGremio(BusinessManUser businessManUser){
+		this.noticeTimeLineController.showProgressDialog("Alerta", "Buscando Noticias Por Favor Espere");
+		this.noticeTimeLineController.getNoticesFromGremio(businessManUser);
+	}
 	public static void setInstance(FacadeController instance) {
+		
 		FacadeController.instance = instance;
 	}
+	
+ public void getNoticesFromEntity(IntermediaryAgent intermediaryAgent) {
+	 this.noticeTimeLineController.showProgressDialog("Alerta", "Buscando Noticias Por Favor Espere");
+		this.noticeTimeLineController.getNoticesFromEntity(intermediaryAgent);
+ }
 
 	public LoginController getLoginController() {
 		return loginController;

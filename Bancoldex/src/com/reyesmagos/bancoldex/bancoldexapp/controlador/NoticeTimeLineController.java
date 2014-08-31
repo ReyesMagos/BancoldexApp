@@ -5,6 +5,7 @@ import java.util.List;
 import com.reyesmagos.bancoldex.bancoldexapp.activities.NoticesTimeLineActivity;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.BusinessManUser;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.CustomAdapter;
+import com.reyesmagos.bancoldex.bancoldexapp.modelo.IntermediaryAgent;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.InternationalBussinessManUser;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.NationalBusinessManUser;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.Notice;
@@ -33,8 +34,16 @@ public class NoticeTimeLineController extends AbstractController {
 		}
 
 	}
-	
-	
+
+	public void getNoticesFromSector(BusinessManUser businessManUser) {
+		NoticeDAO noticeDAO = new NoticeDAO();
+		noticeDAO.getNoticeFromSector(businessManUser.getSector());
+	}
+
+	public void getNoticesFromEntity(IntermediaryAgent intermediaryAgent) {
+		NoticeDAO noticeDAO = new NoticeDAO();
+		noticeDAO.getNoticeFromEntity(intermediaryAgent.getEntity());
+	}
 
 	public void getNoticesFromGremio(BusinessManUser businessManUser) {
 		NoticeDAO noticeDAO = new NoticeDAO();
@@ -42,6 +51,7 @@ public class NoticeTimeLineController extends AbstractController {
 	}
 
 	public void showNotices(List<Notice> noticeList) {
+		dissmissProgressDialog();
 		NoticesTimeLineActivity noticesTimeLineActivity = (NoticesTimeLineActivity) getActivity();
 		CustomAdapter customAdapter = new CustomAdapter(getActivity(),
 				noticeList);

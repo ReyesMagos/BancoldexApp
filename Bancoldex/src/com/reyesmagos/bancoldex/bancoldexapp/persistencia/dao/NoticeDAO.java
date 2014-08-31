@@ -23,9 +23,9 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 	public void getNoticesFromCountrie(List<String> countrie) {
 		// TODO Auto-generated method stub
 		ParseQuery query = new ParseQuery("Notice");
-		for (String s : countrie) {
-			query.whereEqualTo("countrie", s);
-		}
+		String s = countrie.get(0);
+		query.whereEqualTo("countrie", s);
+
 		executeAsynTaskDAO(query);
 
 	}
@@ -51,8 +51,9 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 		query.whereEqualTo("entity", entity);
 		executeAsynTaskDAO(query);
 	}
-	
-	public void getNoticeFromSector(String Sector){
+
+	@Override
+	public void getNoticeFromSector(String Sector) {
 		ParseQuery query = new ParseQuery("Notice");
 		query.whereEqualTo("sector", Sector);
 		executeAsynTaskDAO(query);

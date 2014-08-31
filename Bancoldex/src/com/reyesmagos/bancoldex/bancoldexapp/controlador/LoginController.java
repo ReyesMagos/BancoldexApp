@@ -45,12 +45,13 @@ public class LoginController extends AbstractController {
 					FactoryUsers.getInstance().createUserFromParseUser(user);
 					changeActivity(NoticesTimeLineActivity.class);
 				} else {
-					dissmissProgressDialog();
+					
 					showAlertMessage(
 							"Error",
 							"Los Datos Ingresados Son Incorrectos. "
 									+ arg1.toString());
 				}
+				dissmissProgressDialog();
 			}
 		});
 	}
