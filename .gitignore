@@ -26,8 +26,7 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
-
+Icon
 # Thumbnails
 ._*
 
@@ -39,11 +38,20 @@ Icon
 *.apk
 *.dex
 *.cache
-
-
-
-Bancoldex/bin/
-Bancoldex/bin/AndroidManifest.xml
-Bancoldex/bin/AndroidManifest.xml
-Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/R$attr.class
 Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+*.class
+*.class
+Bancoldex/bin/classes/com/reyesmagos/bancoldex/bancoldexapp/activities/LoginActivityMain.class
+*.class
+*.class
+*.class
+*.class
+>>>>>>> origin/master

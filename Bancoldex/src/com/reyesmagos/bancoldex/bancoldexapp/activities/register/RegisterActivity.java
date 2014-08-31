@@ -1,5 +1,8 @@
 package com.reyesmagos.bancoldex.bancoldexapp.activities.register;
 
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 import com.reyesmagos.bancoldex.bancoldexapp.R;
 import com.reyesmagos.bancoldex.bancoldexapp.R.string;
 import com.reyesmagos.bancoldex.bancoldexapp.util.mocks.SectorMock;
@@ -8,6 +11,7 @@ import com.reyesmagos.bancoldex.bancoldexapp.util.mocks.UserMocks;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -33,10 +37,17 @@ public class RegisterActivity extends Activity {
 	private String password;
 	private SectorMock sectorMock;
 
+=======
+import android.util.Log;
+
+public class RegisterActivity extends Activity {
+
+>>>>>>> origin/master
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.register_activity);
+<<<<<<< HEAD
 		createComponents();
 	}
 
@@ -76,5 +87,10 @@ public class RegisterActivity extends Activity {
 //	public void onRegisterClick(View view){
 //		
 //	}
+=======
+		
+	}
+
+>>>>>>> origin/master
 
 }

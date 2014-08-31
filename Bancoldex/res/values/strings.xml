@@ -11,7 +11,7 @@
     <!-- login -->
     <string name="username_label">username</string>
     <string name="password_label">password</string>
-    
+
     <!-- Register activity -->
     <string name="register_activity">Registrar</string>
     <string name="rol_textview_name">Rol: </string>
@@ -25,6 +25,7 @@
     <string name="municipality_text">Municipio</string>
     <string name="password_text">Contraseña</string>
     <string name="composition_name_text">Socios</string>
+<<<<<<< HEAD
     
     <!-- Selector activity -->
     <string name="selector_activity_name">Sector</string>
@@ -59,5 +60,8 @@
     </string-array>
         <string name="neccesity_text">Necesidades</string>
         <string name="user_name_text">Nombre de usuario</string>
+=======
+    <string name="title_activity_notices_time_line">NoticesTimeLineActivity</string>
+>>>>>>> origin/master
 
 </resources>
