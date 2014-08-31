@@ -22,6 +22,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.register.RegisterActivity"
+            android:label="@string/register_activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.register.SectorSelectorActivity"
+            android:label="@string/sector_name_text"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
+        <activity
+            android:name=".activities.register.NeedSelectorActivity"
+            android:label="@string/need_selector_activity_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" >
+        </activity>
     </application>
 
 </manifest>

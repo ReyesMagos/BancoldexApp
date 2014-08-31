@@ -18,11 +18,10 @@
             android:layout_weight="2"/>
 
         <Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/spinner_rol"
             android:layout_width="176dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            
+            android:layout_weight="1" >
 
             <requestFocus />
         </Spinner>
@@ -32,21 +31,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/textView_company_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.22"
-            android:text="@string/company_name_text" />
-
-        <EditText
-            android:id="@+id/editText_company_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10" >
-        </EditText>
 
     </LinearLayout>
 
@@ -86,7 +70,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher" 
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onSectorClick"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_text" />
+
+        <EditText
+            android:id="@+id/editText_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 
@@ -111,8 +124,37 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView_necessity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/neccesity_text"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imageView_neccesity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_launcher" 
+            android:onClick="onNeedClick"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" 
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageView_accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher"
