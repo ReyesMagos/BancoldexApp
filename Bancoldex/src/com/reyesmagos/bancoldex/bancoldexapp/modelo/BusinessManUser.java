@@ -2,7 +2,7 @@ package com.reyesmagos.bancoldex.bancoldexapp.modelo;
 
 import java.util.List;
 
-abstract class BusinessManUser {
+public abstract class BusinessManUser {
 
 	private String username;
 

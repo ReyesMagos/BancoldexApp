@@ -4,6 +4,7 @@ import com.parse.LogInCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.reyesmagos.bancoldex.bancoldexapp.activities.NoticesTimeLineActivity;
 import com.reyesmagos.bancoldex.bancoldexapp.activities.register.RegisterActivity;
 import com.reyesmagos.bancoldex.bancoldexapp.modelo.FactoryUsers;
 
@@ -35,7 +36,6 @@ public class LoginController extends AbstractController {
 	}
 
 	public void login(String username, String password) {
-		ParseUser user = new ParseUser();
 		ParseUser.logInInBackground(username, password, new LogInCallback() {
 
 			@Override
@@ -43,7 +43,13 @@ public class LoginController extends AbstractController {
 				// TODO Auto-generated method stub
 				if (user != null) {
 					FactoryUsers.getInstance().createUserFromParseUser(user);
-					changeActivity(RegisterActivity.class);
+					changeActivity(NoticesTimeLineActivity.class);
+				} else {
+					dissmissProgressDialog();
+					showAlertMessage(
+							"Error",
+							"Los Datos Ingresados Son Incorrectos. "
+									+ arg1.toString());
 				}
 			}
 		});
@@ -54,7 +60,5 @@ public class LoginController extends AbstractController {
 		// TODO Auto-generated method stub
 		super.changeActivity(destinyClass);
 	}
-	
-	
 
 }

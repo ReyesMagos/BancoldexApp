@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.parse.ParseUser;
+import com.reyesmagos.bancoldex.bancoldexapp.controlador.FacadeController;
 
 public class FactoryUsers {
 
@@ -44,7 +45,7 @@ public class FactoryUsers {
 				.getString("subSector"));
 		Location location = new Location();
 		location.setAdress(parseUser.getString("adress"));
-		location.setDepartament(parseUser.getString("departament"));
+		location.setDepartament(parseUser.getString("department"));
 		location.setMunicipio(parseUser.getString("municipio"));
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
@@ -52,6 +53,9 @@ public class FactoryUsers {
 		internationalBussinessManUser.setOperatingCountries(getListFromToken(
 				parseUser.getString("operatingCountries"), ","));
 		internationalBussinessManUser.setGremio(parseUser.getString("gremio"));
+		FacadeController.getInstance().setBusinessManUser(
+				internationalBussinessManUser);
+
 	}
 
 	public void createNationalBussinessManUser(ParseUser parseUser) {
@@ -67,7 +71,7 @@ public class FactoryUsers {
 		nationalBusinessManUser.setSubSectro(parseUser.getString("subSector"));
 		Location location = new Location();
 		location.setAdress(parseUser.getString("adress"));
-		location.setDepartament(parseUser.getString("departament"));
+		location.setDepartament(parseUser.getString("department"));
 		location.setMunicipio(parseUser.getString("municipio"));
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
@@ -75,6 +79,8 @@ public class FactoryUsers {
 		nationalBusinessManUser.setKeyActivities(parseUser
 				.getString("keyActivities"));
 		nationalBusinessManUser.setGremio(parseUser.getString("gremio"));
+		FacadeController.getInstance().setBusinessManUser(
+				nationalBusinessManUser);
 	}
 
 	public void createIntermediaryAgent(ParseUser parseUser) {
@@ -85,11 +91,12 @@ public class FactoryUsers {
 		intermediaryAgent.setAgentName(parseUser.getString("agentName"));
 		Location location = new Location();
 		location.setAdress(parseUser.getString("adress"));
-		location.setDepartament(parseUser.getString("departament"));
+		location.setDepartament(parseUser.getString("department"));
 		location.setMunicipio(parseUser.getString("municipio"));
 		location.setLat(Double.parseDouble(parseUser.getString("lat")));
 		location.setLng(Double.parseDouble(parseUser.getString("lng")));
 		intermediaryAgent.setLocation(location);
+		FacadeController.getInstance().setIntermediaryAgent(intermediaryAgent);
 	}
 
 	public List<String> getListFromToken(String s, String token) {

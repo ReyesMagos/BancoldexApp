@@ -4,6 +4,8 @@ import com.reyesmagos.bancoldex.bancoldexapp.R;
 import com.reyesmagos.bancoldex.bancoldexapp.R.id;
 import com.reyesmagos.bancoldex.bancoldexapp.R.layout;
 import com.reyesmagos.bancoldex.bancoldexapp.R.menu;
+import com.reyesmagos.bancoldex.bancoldexapp.controlador.FacadeController;
+import com.reyesmagos.bancoldex.bancoldexapp.modelo.BusinessManUser;
 
 import android.app.Activity;
 import android.app.ActionBar;
@@ -17,11 +19,17 @@ import android.view.ViewGroup;
 import android.os.Build;
 
 public class NoticesTimeLineActivity extends Activity {
+	private FacadeController facadeController;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_notices_time_line);
+		facadeController = FacadeController.getInstance();
+		BusinessManUser businessManUser= facadeController.getBusinessManUser();
+		if(businessManUser!=null){
+			
+		}
 
 	}
 
@@ -44,7 +52,5 @@ public class NoticesTimeLineActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
-
 
 }
