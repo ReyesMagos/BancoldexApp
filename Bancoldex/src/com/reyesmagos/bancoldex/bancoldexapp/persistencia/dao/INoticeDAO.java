@@ -15,5 +15,7 @@ public interface INoticeDAO {
 	public void getNoticeFromContacto(String contacto);
 
 	public void getNoticeFromEntity(String entity);
+	
+	public void getNoticeFromSector(String sector);
 
 }
