@@ -39,6 +39,26 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 	}
 
 	@Override
+	public void getNoticeFromContacto(String contacto) {
+		ParseQuery query = new ParseQuery("Notice");
+		query.whereEqualTo("contacto", contacto);
+		executeAsynTaskDAO(query);
+	}
+
+	@Override
+	public void getNoticeFromEntity(String entity) {
+		ParseQuery query = new ParseQuery("Notice");
+		query.whereEqualTo("entity", entity);
+		executeAsynTaskDAO(query);
+	}
+	
+	public void getNoticeFromSector(String Sector){
+		ParseQuery query = new ParseQuery("Notice");
+		query.whereEqualTo("sector", Sector);
+		executeAsynTaskDAO(query);
+	}
+
+	@Override
 	public void executeAsynTaskDAO(ParseQuery parseQuery) {
 		// TODO Auto-generated method stub
 		super.executeAsynTaskDAO(parseQuery);
@@ -57,6 +77,7 @@ public class NoticeDAO extends AbstractDAO implements INoticeDAO {
 			notice.setGremio(parseObject.getString("gremio"));
 			notice.setSector(parseObject.getString("sector"));
 			notice.setTitle(parseObject.getString("title"));
+			notice.setContacto(parseObject.getString("contacto"));
 			noticeList.add(notice);
 
 		}

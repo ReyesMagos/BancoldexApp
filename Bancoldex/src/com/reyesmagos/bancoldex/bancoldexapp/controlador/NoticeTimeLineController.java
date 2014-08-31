@@ -33,6 +33,8 @@ public class NoticeTimeLineController extends AbstractController {
 		}
 
 	}
+	
+	
 
 	public void getNoticesFromGremio(BusinessManUser businessManUser) {
 		NoticeDAO noticeDAO = new NoticeDAO();

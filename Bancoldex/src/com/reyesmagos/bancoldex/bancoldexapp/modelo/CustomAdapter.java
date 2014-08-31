@@ -51,7 +51,7 @@ public class CustomAdapter extends BaseAdapter {
 			holder.textviewRegion = (TextView) convertView
 					.findViewById(R.id.textview_region);
 			holder.textviewSector = (TextView) convertView
-					.findViewById(R.id.textview_region);
+					.findViewById(R.id.textview_sector);
 			holder.textviewContent = (TextView) convertView
 					.findViewById(R.id.textview_content);
 
